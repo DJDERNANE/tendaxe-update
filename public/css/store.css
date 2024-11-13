@@ -1,0 +1,524 @@
+
+
+    .navbar{
+        flex-direction: column;
+    }
+    .top{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        height: 38px;
+    }
+    .store-navbar {
+        justify-content: space-between;
+    }
+
+    .social-media{
+        margin-right: 30px;
+    }
+    .social-media i{
+        font-size: 20px;
+        margin-right: 20px;
+    }
+    .store-form {
+        height: 24px;
+        border-radius: 30px;
+        overflow: hidden;
+    }
+
+    .phone_number h5{
+        font-size: 14px !important;
+        margin-bottom: 0px !important;
+        width: max-content;
+    } 
+    .phone_number i{
+        font-size: 18px;
+    }
+    .store-form input {
+        border: none;
+        height: 100%;
+        outline: none;
+        font-size: 12px;
+    }
+    .store-form button{
+        border: none;
+    
+        outline: none;
+        font-size: 12px;
+    }
+    .store-form button i {
+    
+        font-size: 18px;
+        
+    }
+    .store-form input{
+        width: 250px;
+    }
+    .fw-light{
+        font-weight: 300
+    }
+
+    .sidebar-categories {
+        border: solid #E0E0E0 1px;
+        border-radius: 4px;
+        z-index: -1;
+        position: relative;
+    }
+
+    .categories-header {
+        border-radius: 4px;
+    }
+
+    .characteristic div {
+
+        background-color: #F8F8F8;
+        border: solid #E0E0E0 1px;
+        border-radius: 4px;
+        font-size: 12px
+    }
+
+    .card {
+        position: relative;
+        overflow: hidden;
+        height: 255px;
+        width: 220px;
+        cursor: pointer;
+    }
+    #details{
+        word-break: break-all;
+    }
+    .cat-card-container{
+        position: relative;
+        height: 235px;
+        width: 100%;
+        cursor: pointer;
+        overflow: hidden;
+        border-radius: 8px;
+    }
+    .cat-card-container img{
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1 ;
+    }
+    .category-conent{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        gap: 25px;
+    }
+    .cat-card-container .black-bg{
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1 ;
+        background: linear-gradient(transparent 0% , rgba(0, 0, 0, 0.6)  65%);
+    }
+    .cat-card-container h6{
+        color: white;
+        position: absolute;
+        bottom: 0px;
+    }
+    .boutique-card{
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        height: 240px;
+        flex-direction: column;
+    }
+    .boutique-card .profile{
+        position: absolute;
+        top: 52%; /* Position the top edge of the element at the middle of the container */
+        left: 50%; /* Position the left edge of the element at the middle of the container */
+        transform: translate(-50%, -50%); 
+        width: 80px;
+        padding: 10px;
+        height: 80px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .boutique-card .profile img{
+        width: 90%;
+        height: 90%;
+    }
+    .boutique-account{
+        display: flex;
+        flex-direction: column;
+        border-radius: 8px;
+        height: max-content;
+        margin-bottom: 20px;
+        overflow: hidden;
+    }
+    .boutique-account >img{
+        height: 200px;
+        object-fit: contain ;
+    }
+    .boutique-info{
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+    }
+    .storeName{
+        
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+       
+    }
+    .storeName p {
+        font-size: 30px;
+        font-weight: 600;
+
+    }
+    .boutique-info >div{
+        display: flex;
+        align-items: top;
+    }
+    .boutique-image img{
+        height: 100%;
+        width: 100%;
+    }
+    .boutique-image{
+        flex: 4;
+    }
+    .boutique-name{
+        flex: 3;
+        background-color: white;
+        height: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    i {
+        font-size: 22px;
+    }
+
+    .card img {
+        height: 120px;
+        width: 100%;
+        object-fit: contain;
+
+    }
+
+    .marque {
+        font-size: 12px;
+    }
+
+    .marque span {
+        opacity: 0.5;
+    }
+
+    .bi.bi-star-fill {
+        font-size: 15px;
+        color: gold;
+    }
+
+    .promo {
+        background-color: red;
+        color: white;
+        text-align: center;
+        transform: rotate(-45deg);
+        position: absolute;
+        left: -40px;
+        top: 20px;
+        padding: 2px 40px;
+        font-size: 10px
+    }
+
+    button {
+        border: solid #E0E0E0 1px;
+        background-color: white;
+        text-align: center;
+        font-size: 15px
+    }
+
+    .card > form {
+        height:0px;
+        overflow: hidden;
+        bottom: 0;
+        transition: all 0.6s;
+    }
+    .card:hover form {
+        height: max-content;
+        transition:  all 0.6s;
+    }
+
+    .card .btn {
+        font-size: 10px;
+    }
+
+    .bi.bi-cart {
+        font-size: 12px
+    }
+
+    .populair-products .title p {
+        font-size: 24px;
+    }
+
+    .populair-products .title span {
+        width: 100%;
+        height: 2px;
+        background-color: #BDBDBD;
+    }
+
+    .swiper {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        height: calc((100% - 30px) / 2) !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .swiper-wrapper{
+        height: max-content;
+    }
+
+
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+        content: none;
+    }
+
+    .item i {
+        font-size: 24px
+    }
+
+    .public-work .title {
+        font-size: 25px
+    }
+
+    .work-desc {
+        font-size: 13px
+    }
+
+    .payment div p {
+        font-weight: bold;
+        font-size: 12px
+    }
+    .payment i{
+        font-size: 30px;
+    }
+    .card a{
+        text-decoration: none;
+        color: black
+    }
+    .list-group{
+        max-height: 85vh;
+        overflow: scroll;
+        overflow-x:hidden
+    }
+    .list-group::-webkit-scrollbar{
+        width: 7px;
+    }
+    .list-group li:hover{
+        background-color:#E0E0E0;
+    }
+    .list-group li:hover i{
+        transform: rotate(180deg);
+        transition: all 0.5s
+    }
+
+    .list-group-horizontal li:hover{
+        background-color: transparent;
+    }   
+    .btm-navbar{
+        height: 76px;
+    }
+    .cart-price{
+        font-size: 16px;
+        font-weight: 700;
+    }
+    .navbar-brand img{
+        height: 20px;
+        width: 119px;
+    }
+    .navbar-nav li a{
+        font-size: 14px;
+    }
+    .cnx .btn{
+        border-radius: 30px;
+        font-weight: 600;
+        height: 24px;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+    }
+    .navbar-collapse{
+        width: 100%;
+    }
+    .nos-marques .title{
+        font-size: 25px
+    }
+    .btns{
+        width: 40%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+    .btns a{
+        width: 180px;
+        height: 56px;
+        font-size: 16;
+        color: black;
+        font-weight: 600;
+    }
+    .btns a:hover{
+        text-decoration: none;
+    }
+    .btns a div{
+        height: 100%;
+    }
+    .btns a div i{
+        font-size: 30px;
+    }
+    .btns a div:first-child {
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+        width: 70%;
+    }
+    .btns a div:nth-child(2) {
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+    }
+    .marques div {
+        height: 180px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center
+    }
+    .marques a{
+        text-decoration: none;
+        color: black
+    }
+    .marques{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr; /* Four columns with equal width */
+        gap: 26px; 
+    }
+    .marques .marque img{
+        height: 160px;
+        width: 100%;
+        object-fit: contain;
+    }
+
+    .products{
+        display: grid;
+        grid-template-columns: auto auto auto auto; /* Four columns with equal width */
+        gap: 26px; 
+    }
+
+    .desc {
+        position: absolute;
+        bottom: 0;
+        background-color: white;
+    }
+    .tendax-store-section{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6%;
+    }
+    .create-store h4{
+        color: #11A3AB;
+    }
+    .create-store > p{
+        font-size: 12px;
+    }
+    .create-store-points > div{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+    .create-store-points .desc-store{
+        font-size: 10px;
+        width: 75%;
+        margin: auto;
+    }
+    .category .subcats{
+        display: none;
+    }
+    .category:hover .subcats{
+        display: block;
+    }
+    .primaryDesc{
+        word-break: break-all;
+    }
+    #wlc{
+        font-size: 40px;
+        font-weight: 600;
+    }
+    .wlc-phrase{
+        font-size: 20px;
+        font-weight: 400;
+        width: 90%;
+        margin: auto;
+    }
+    .marque{
+        overflow: hidden;
+    }
+    .marque img{
+        object-fit: contain;
+        width: 100%;
+    }
+    .logoStore{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    .logoStore img{
+        width: 100%;
+        height: 100%;
+    }
+    #main-image{
+        height: 280px;
+        width: 350px;
+    }
+    .gallery{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        column-gap: 8px;
+    }
+    .gallery img{
+        width: 80px;
+        height: 80px;
+    }
+    .navbar-nav-responsive{
+        display: none;
+    }
+    .bi-cart3{
+        font-size: 20px;
+    }
+    .btns {
+        margin-top: 40px;
+    }
+    .product-container{
+        min-height: 120vh;
+    }
+    .marques-swiper .swiper .swiper-slide img{
+        width: 150px;
+        height: 150px;
+    }
+    .subcategories-side{
+        background-color: red;
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        z-index: 1000;
+        left: 100%;
+    }
+   

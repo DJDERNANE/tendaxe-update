@@ -1,0 +1,224 @@
+/* ============= start page allDocuments ============= */
+
+/* start global style */
+
+:root{
+    --main-color: #11a3ab;
+    --color-text: #101828;
+}
+a,a:hover{
+    text-decoration: none;
+}
+button:focus{
+    box-shadow: none!important;
+    outline: 0;
+}
+input:focus{
+    box-shadow: none!important;
+}
+
+/* button scroll to top */
+
+.scroll-top{
+    position: fixed;
+    bottom: 60px;
+    right: 10px;
+    z-index: 100;
+    border: 0;
+    background: var(--main-color);
+    display: none;
+    outline: none;
+    padding: 10px;
+    width: 45px;
+    height: 45px;
+    justify-content: center;
+    align-items: center;
+    border-radius: .25rem;
+    box-shadow: 0 0 9px 2px rgba(255,255,255,.5);
+    transition: all .2s ease-in-out;
+}
+.scroll-top .bi-arrow-up::before{
+    color: #fff;
+    margin-bottom: 0;
+    font-size: 1.3rem;
+    transition: all .2s ease-in-out;
+}
+.scroll-top:hover .bi-arrow-up::before{
+    transform: translateY(-5px);
+}
+.scroll-top:focus{
+    outline: 0;
+    border: 0;
+}
+
+button,
+button:focus{
+    outline: 0;
+    box-shadow: none;
+}
+
+p:first-letter{
+    text-transform: capitalize;
+}
+
+section{
+	margin-bottom: 40px;
+}
+.section-title{
+	margin-bottom: 25px;
+	font-size: 1.5rem;
+	padding-left: 5px;
+	border-left: 8px solid var(--main-color);
+}
+.section-title:first-letter{
+	text-transform: capitalize;
+}
+
+
+
+
+/* end global style */
+
+
+
+/* start section upload-document */
+
+.upload-document{
+	padding-top: 40px;
+}
+.upload-document h2{
+	text-align: center;
+	margin-bottom: 40px;
+	font-weight: 700;
+}
+.upload-document h2:first-letter{
+	text-transform: capitalize;
+}
+.upload-document-wrapper{
+	width: 70%;
+    margin: auto;
+}
+#dropzone{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+    height: 170px;
+    margin: 20px 0 40px;
+    border: 2px dotted #ccc;
+    text-align: center;
+    padding: 25px;
+    cursor: pointer;
+	width: 100% !important;
+}
+#dropzone svg{
+	width: 50px;
+	fill: var(--main-color);
+}
+#dropzone.hover{
+    border: 2px dashed var(--main-color);
+}
+.document-form{
+    margin-bottom: 40px;
+    border-bottom: 2px dashed var(--main-color);
+    padding-bottom: 35px;
+}
+#fileInfos{
+	width: 100% !important;
+}
+#fileInfos > form:last-child{
+	border-bottom: 0;
+}
+.document-form{
+	width: 100% !important;
+}
+.document-form label{
+	display: block;
+    text-align: left;
+	text-transform: capitalize;
+	font-weight: 600;
+	margin-bottom: 5px;
+}
+.document-form input{
+	border-color: #b7bdc9;
+	line-height: 2;
+	margin-bottom: 15px;
+}
+.document-form input:focus,
+.document-form select:focus,
+.document-form textarea:focus{
+	border-color: var(--main-color);
+	box-shadow: none;
+}
+.document-form textarea{
+	margin-bottom: 15px;
+	min-width: 100%;
+	max-width: 100%;
+	min-height: 150px;
+	max-height: 150px;
+	border-color: #b7bdc9;
+}
+.document-form select{
+	border-color: #b7bdc9;
+	margin-bottom: 15px;
+}
+.document-form button.document-submit{
+	border-radius: .5rem;
+    border: 1px solid var(--main-color);
+    background-color: var(--main-color);
+    padding: 8px 15px;
+    color: #fff;
+    text-transform: capitalize;
+    transition: all .2s ease-in-out;
+}
+.document-form button.document-submit:hover{
+	background-color: #fff;
+	color: var(--main-color);
+}
+.document-form button.document-delete{
+	text-transform: capitalize;
+	background-color: transparent;
+	border: 0;
+	margin-left: 20px;
+	color: var(--main-color);
+	transition: all .2s ease-in-out;
+}
+.document-form button.document-delete:hover{
+	color: #333;
+}
+
+
+/* end section upload-document */
+
+
+
+
+
+/* ==== Media Query ==== */
+
+@media (min-width: 992px) and (max-width: 1199px){
+    .upload-document-wrapper {
+	    width: 80%;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+    .upload-document-wrapper {
+	    width: 90%;
+	}
+}
+
+@media (max-width: 767px){
+	.upload-document-wrapper {
+	    width: 100%;
+	}
+}
+
+@media (max-width: 575px){
+	.document-form{
+		text-align: center;
+	}
+	.document-form label{
+		display: block;
+		text-align: left;
+	}
+}

@@ -1,0 +1,369 @@
+/* ==== media query === */
+
+@media (min-width: 992px){
+	.product-details-section > .container > .row > div:last-child{
+		padding-left: 35px!important;
+	}
+	.for-centrlize-v{
+		margin-top: 70px;
+	}
+}
+@media (min-width: 992px) and (max-width: 1199px){
+	header .header-content #wlc{
+		font-size: 2rem;
+	}
+	header .header-content .wlc-phrase{
+		font-size: 1rem;
+	}
+}
+
+@media (max-width: 991px){
+	header{
+		height: calc(100vh - 66.8px);
+	    min-height: calc(100vh - 66.8px);
+	    margin-top: 66.8px;
+	}
+	.tendax-store-section{
+		flex-direction: column;
+		width: 100%;
+	}
+	.testimonials .swiper{
+		width: 100%;
+	}
+	.testimonials .testimonials-swiper-button-prev1{
+		left: 0;
+	}
+	.testimonials-swiper-button-next1{
+		right: 0;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+	header .header-content #wlc{
+		font-size: 1.5rem;
+	}
+	header .header-content .wlc-phrase{
+		font-size: .9rem;
+	}
+	.contact-us .contact-us-wrapper .contact-phone-international{
+		padding-right: 10px;
+	}
+	.contact-us .contact-phone-international .contact-phone-box{
+		padding-right: 4px!important;
+	}
+	.contact-us .contact-us-wrapper .contact-details .contact-phone-box i{
+		width: 30px;
+	    height: 30px;
+	    margin-right: 5px;
+	    font-size: 16px;
+	}
+	.contact-us .contact-us-wrapper .contact-phone-international > p{
+		margin-left: 2px;
+	    width: 40%;
+	    text-align: center;
+	    font-size: 0.9rem;
+	}
+	.contact-us .contact-us-wrapper .contact-phone-international > p br{
+		display: none;
+	}
+}
+
+@media (min-width: 576px) and (max-width: 991px){
+	.stores > .container,
+	.marques-section > .container{
+		max-width: 90%;
+	}
+}
+
+@media (min-width: 577px) and (max-width: 767px){
+	header .header-content #wlc{
+		font-size: 1.3rem;
+	}
+	header .header-content .wlc-phrase{
+		font-size: .9rem;
+	}
+	header .header-content .btns{
+		flex-direction: row;
+	}
+	header .header-content .btns a{
+		margin: 0;
+	}
+	header .header-content .btns a:first-child{
+		margin-right: 5%;
+	}
+}
+
+@media (max-width: 767px){
+	.nav-inferior-lg .nav-bottom .categories-dropdown .dropdown-menu{
+		max-width: 60vw;
+    	min-width: 60vw;
+	}
+	header > .container{
+		max-width: 97%;
+	}
+	header .header-content #wlc{
+		margin-top: 0;
+	}
+	.upload-document-wrapper{
+		flex-direction: column;
+	}
+	.upload-document-wrapper > div{
+		margin-bottom: 15px;
+		margin-left: 0;
+		margin-right: 0;
+		width: 100%!important;
+	}	
+	.contact-us .contact-us-wrapper{
+		flex-direction: column;
+	}
+	.contact-us .contact-us-wrapper > div{
+		width: 100%;
+	}
+	.contact-us .contact-us-wrapper .contact-desc{
+		margin-bottom: 30px;
+	}
+	.payment-delivery-ways > .container-fluid > .row:first-child{
+		flex-direction: column-reverse;
+	}
+	.payment-delivery-ways .payment-ways{
+		margin-bottom: 50px;
+	}
+	.payment-delivery-ways .others-payment-ways img{
+		width: 45px;
+		height: 45px;
+	}
+	footer{
+		text-align: center !important;
+	}
+	footer .footer-logo-desc{
+		margin-bottom: 40px;
+	}
+}
+
+@media (max-width: 700px){
+	.last-advertisements .bg-white div.mb-2 div a:first-child{
+		margin-bottom: 5px;
+	}
+	.testimonials .swiper-slide{
+		width: 100%!important;
+	}
+}
+
+@media (max-width: 575px){
+	.whatsApp-contact-link{
+		bottom: 5%;
+	}
+	.contact-us .contact-us-wrapper.contact-page > div:first-child, .contact-us .contact-us-wrapper.contact-page > div:nth-child(2){
+		width: 100%;
+		margin: 20px 0px;
+	}
+	.contact-page-parent{
+		margin-top: 80px;
+	}
+	.contact-us.contact-page{
+		margin-top: 0px;
+	}
+	.contact-us-wrapper.contact-page{
+		margin-top: 0px;
+	}
+	
+	.store-catego-products, .product-details-section{
+		margin-top: 160px;
+	}
+	.nav-inferior-lg .nav-bottom .categories-search-wrapper{
+		width: 100%;
+	}
+	.nav-inferior-lg .nav-bottom .categories-dropdown,
+	.nav-inferior-lg .nav-bottom .categories-search-wrapper form{
+		width: 50%;
+	}
+	.nav-inferior-lg .nav-bottom .categories-dropdown > button{
+		padding-left: 0;
+	}
+	.nav-inferior-lg .nav-bottom .categories-dropdown .dropdown-menu{
+		max-width: 100vw;
+    	min-width: 95vw;
+	}
+	header{
+		background-image: url("header-back-phone.png");
+	}
+	header .header-content #wlc{
+		font-size: 1.7rem;
+		margin-bottom: 0.5rem;
+		transform: translateY(-15px);
+	}
+	header .header-content .wlc-phrase{
+		font-size: 1rem;
+		width: 100%;
+	}
+	header .header-content .btns{
+		flex-direction: column;
+		align-items: center;
+	}
+	header .header-content .btns a{
+		margin: 0;
+	}
+	header .header-content .btns a:first-child{
+		margin-right: 0;
+		margin-bottom: 30px;
+	}
+	header .header-content .btns a div:first-child{
+		font-size: 0.8rem;
+	}
+	.store-catego-products-grid .breadcrumb li a,
+	.store-catego-products-grid .breadcrumb li.active{
+		font-size: 0.85rem;
+	}
+	.last-advertisements .bg-white div.mb-2 .text-15{
+		font-size: 12px;
+	}
+	.last-advertisements .bg-white div.mb-2 > span:first-child{
+		margin-left: 0!important;
+	}
+	.last-advertisements .bg-white div.mb-2 div a.btn{
+		font-size: 14px;
+		padding-left: 5px !important;
+        padding-right: 5px !important;
+	}
+	.view-more{
+		padding: 3px 13px;
+		font-size: 0.9rem;
+	}
+	.swiper-button-next,
+	.swiper-button-prev{
+		display: none;
+	}
+	.product-box{
+		height: auto;
+	}
+	.product-box:hover .desc{
+		transform: translateY(0);
+		box-shadow: none;
+	}
+	.product-box form{
+		display: block;
+		height: auto;
+	}
+	.product-box .qte-products{
+		display: none;
+	}
+	.product-box .add-to-cart button{
+		padding: 5px 8px;
+	}
+	.stats > .container > .row > .col{
+		padding-right: .25rem !important;
+    	padding-left: .25rem !important;
+	}
+	.create-store .create-store-points .create-store-point-box h6{
+		font-size: 1.19rem;
+	}
+	.create-store .create-store-points .create-store-point-box .desc-store{
+		font-size: 0.95rem;
+		width: 90%;
+	}
+	.marquesSwiper .swiper-slide{
+		width: max-content!important;
+	}
+	.testimonials .swiper-wrapper{
+		margin-top: 0!important;
+	}
+	.testimonials .testimonial-box{
+		padding: 15px;
+	}
+	.testimonials .testimonial-box .testimonial-text{
+		text-align: center;
+	}
+	.testimonials .testimonial-box .testimonial-profil-icon-wrapper{
+		flex-direction: column;
+		align-items: normal;
+	}
+	.testimonials .testimonial-profil-icon-wrapper .testimonial-profil-box{
+		margin-bottom: 15px;
+	}
+	.testimonials .testimonial-profil-info .testimonial-name{
+		font-size: 0.85rem;
+	}
+	.testimonials .testimonial-profil-info .testimonial-post,
+	.testimonials .testimonial-profil-info .testimonial-company{
+		font-size: 0.75rem;
+	}
+	.testimonials .testimonial-profil-icon-wrapper img.testimonial-icon{
+		width: 50px;
+		height: 50px;
+		margin-left: auto;
+	}
+	.section-title{
+		font-size: calc(1.05rem + .9vw);
+	}
+	.create-store > .container > h4{
+		font-size: calc(1rem + .3vw);
+	}
+	.create-store > .container > p{
+		font-size: 0.9rem;
+	}
+	.contact-us .contact-us-wrapper .contact-details .contact-phone-box{
+		padding-right: 8px;
+		font-size: .8rem;
+	}
+	.contact-us .contact-us-wrapper .contact-details .contact-phone-box i{
+		width: 30px;
+		height: 30px;
+		font-size: 16px;
+		margin-right: 5px;
+	}
+	.contact-us .contact-us-wrapper .contact-phone-international > p{
+		margin-left: 1px;
+	    text-align: center;
+	    font-size: .9rem;
+	}
+	footer .contact-info{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	footer .contact-info > div:last-child{
+		display: block!important;
+	}
+	footer .footer-down .copyright-socialmedia{
+		flex-direction: column-reverse;
+	}
+	footer .footer-down .copyright{
+		font-size: 0.9rem;
+	}
+	footer .footer-down .copyright-socialmedia ul{
+		margin-bottom: 15px;
+	}
+	.box-catego{
+		height: 180px;
+		margin-bottom: 15px;
+	}
+	.box-catego .catego-name{
+		font-size: 0.85rem;
+	}
+	.product-details-section .product-info .addToCart-form{
+		flex-direction: column;
+	}
+	.product-details-section .product-info .addToCart-form > div{
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	.product-details-section .product-info .addToCart-form > button{
+		width: 100%;
+	}
+	.product-details-section .items-wrapper{
+		width: 80%;
+		margin: auto;
+	}
+	.documents-notices{
+		padding-bottom: 0;
+	}
+	.store-info .store-contact-phone, .store-location{
+		flex-direction: column;
+	}
+	.store-info .store-contact-phone .store-contact-phone-num-wrapper{
+		padding-left: 36px;
+	}
+	.comment{
+		display: none;
+	}
+}
