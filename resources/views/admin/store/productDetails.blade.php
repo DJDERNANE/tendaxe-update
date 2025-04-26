@@ -41,16 +41,19 @@
 
                         </div>
                         <div class="my-4 col-10">
-                            <label for="quantity" class="my-2">Quantite:</label>
+                           
                             <div class="row">
                                 <div class="col-8">
+                                    <label for="quantity">Quantite:</label>
                                     <input type="text" class="px-2 py-1 bg-light border-0 rounded my-2" id="quantity"
                                         name="qty" value="{{ $product->quantity }}">
                                 </div>
-                                {{-- <div class="col-4 px-2 my-2 d-flex justify-content-between aligni-items-center">
-                                    <button class="btn btn-danger rounded-3 " style="height: 40px"> Soustraire</button>
-                                    <button class="btn primary " style="height: 40px">Ajouter</button>
-                                </div> --}}
+                                <div class="col-4">
+                                    <label for="unit" >Unité:</label>
+                                    <input type="text" class="px-2 py-1 bg-light border-0 rounded my-2" id="unit"
+                                        name="unit" value="{{ $product->unit }}">
+                                </div>
+
 
 
                             </div>

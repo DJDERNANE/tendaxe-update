@@ -602,8 +602,12 @@
                                             <button type="button" class="text-center"
                                                 onclick="changeQty(this, 1)">+</button>
                                         </div>
+                                        
                                     </div>
                                     <div class="add-to-cart">
+                                        <div>
+                                            <p>{{ $product->unit }}</p>
+                                        </div>
                                         <button class="btn btn-primary" type="submit"><i class="bi bi-cart"></i> Ajouter
                                             au panier</button>
                                     </div>

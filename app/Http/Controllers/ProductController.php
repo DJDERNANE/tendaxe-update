@@ -154,6 +154,7 @@ class ProductController extends Controller
         $product = Product::create([
             'name' => $request->name,
             'ref' => $request->ref,
+            'unit' => $request->unit,
             'picture' => $imageName,
             'price' => $request->price,
             'quantity' => $request->qty,
@@ -292,6 +293,7 @@ class ProductController extends Controller
         $product->update([
             'name' => $request->name,
             'ref' => $request->ref,
+            'unit' => $request->unit,
             'price' => $request->price,
             'quantity' => $request->qty,
             'brand_id' => $request->brand,
@@ -345,6 +347,7 @@ class ProductController extends Controller
         $product->update([
             'name' => $request->name,
             'ref' => $request->ref,
+            'unit' => $request->unit,
             'price' => $request->price,
             'quantity' => $request->qty,
             'brand_id' => $request->brand,

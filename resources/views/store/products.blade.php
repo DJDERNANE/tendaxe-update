@@ -160,14 +160,20 @@
                                                 <input type="hidden" name="product_id" value="{{ $product->id }}">
                                                 <div class="qte-products">
                                                     <span>Qte :</span>
-                                                    <div class="qte-products-control">
-                                                        <button type="button" class="text-center"
-                                                            onclick="changeQty(this, -1)">-</button>
-                                                        <input class="text-center" id="qty-{{ $product->id }}" min="1"
-                                                            value="1" type="number" name="qte">
-                                                        <button type="button" class="text-center"
-                                                            onclick="changeQty(this, 1)">+</button>
+                                                    <div style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+                                                        <div class="qte-products-control">
+                                                            <button type="button" class="text-center"
+                                                                onclick="changeQty(this, -1)">-</button>
+                                                            <input class="text-center" id="qty-{{ $item->id }}" min="1"
+                                                                value="1" type="number" name="qte">
+                                                            <button type="button" class="text-center"
+                                                                onclick="changeQty(this, 1)">+</button>
+                                                        </div>
+                                                        <div>
+                                                            <p style="font-weight: 600">{{ $item->unit }}</p>
+                                                        </div>
                                                     </div>
+        
                                                 </div>
                                                 <div class="add-to-cart">
                                                     <button class="btn btn-primary" type="submit"><i class="bi bi-cart"></i> Ajouter
@@ -374,11 +380,20 @@
                                     <input type="hidden" value="14" name="product_id" readonly="">
                                     <div class="qte-products">
                                         <span>Qte :</span>
-                                        <div class="qte-products-control">
-                                            <button type="button" class="text-center" onclick="changeQty(this, -1)">-</button>
-                                            <input class="text-center" id="qty-{{ $item->id }}" min="1" value="1" type="number" name="qte">
-                                            <button type="button" class="text-center" onclick="changeQty(this, 1)">+</button>
+                                        <div style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+                                            <div class="qte-products-control">
+                                                <button type="button" class="text-center"
+                                                    onclick="changeQty(this, -1)">-</button>
+                                                <input class="text-center" id="qty-{{ $item->id }}" min="1"
+                                                    value="1" type="number" name="qte">
+                                                <button type="button" class="text-center"
+                                                    onclick="changeQty(this, 1)">+</button>
+                                            </div>
+                                            <div>
+                                                <p style="font-weight: 600">{{ $item->unit }}</p>
+                                            </div>
                                         </div>
+
                                     </div>
                                     <div class="add-to-cart">
                                         <button class="btn btn-primary" type="submit"><i class="bi bi-cart"></i> Ajouter

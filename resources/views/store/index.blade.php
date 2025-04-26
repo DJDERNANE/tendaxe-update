@@ -80,59 +80,54 @@
     <section class="store-catego-products">
         <div class="container-fluid">
             <div class="row">
-                <div class="d-none d-lg-block col-lg-3">
-                    <div class="catego-sidebar">
-                        <h4 class="catego-sidebar-head">
-                            <svg width="17" height="18" viewBox="0 0 17 18" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect x="1.00024" y="1" width="15" height="3" rx="1.5" fill="#11A3AB" />
-                                <rect x="1.00024" y="7" width="15" height="3" rx="1.5" fill="#11A3AB" />
-                                <rect x="1.00024" y="13" width="15" height="3" rx="1.5" fill="#11A3AB" />
-                            </svg>
-                            <span>Categories</span>
-                        </h4>
-                        <div class="accordion" id="accordionCategoSidebar">
-                            @foreach ($cats as $category)
-                                @php
-                                    $headerId = 'heading' . $loop->index;
-                                    $accordionId = 'collapse' . $loop->index;
-                                @endphp
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="{{ $headerId }}">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#{{ $accordionId }}" aria-expanded="false"
-                                            aria-controls="{{ $accordionId }}">
-                                            <img src="https://tendaxe.com/img/icons/two_hands.png" class="catego-icon"
-                                                alt="Category Icon">
-                                            {{ $category->name }}
-                                        </button>
-                                    </h2>
-                                    <div id="{{ $accordionId }}" class="accordion-collapse collapse"
-                                        aria-labelledby="{{ $headerId }}">
-                                        <div class="accordion-body">
-                                            <ul class="list-unstyled sub-catego-list">
-                                                @foreach ($category->children as $child)
-                                                    <li>
-                                                        <a href="{{ route('category.products', $child->id) }}"
-                                                            class="sub-catego-link">{{ $child->name }}</a>
-                                                    </li>
-                                                @endforeach
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            @endforeach
-                            besoi
+
+                <div class="d-none d-lg-block col-lg-3" id="mobile_filter">
+                    <div class=" h-[200px] bg-white d-flex align-items-center justify-content-center border-bottom pb-4">
+                        <h4 class="text-center bold">Filtres</h4>
+                    </div>
+                    
+                    <form class="bg-white p-2 border rounded mt-2" method="GET" action="{{ route('search') }}">
+                        <div class="input-group mb-2">
+                            <input type="text" class="form-control bg-light" style="font-size: small"
+                                placeholder="Mot clé" name="keyword" value="{{ old('keyword') }}">
+                            <div class="input-group-append">
+                                <button type="submit" class="btn btn-sm btn-primary" type="button" id="button-addon2">
+                                    <img src="{{ asset('img/icons/search2.png') }}" alt="">
+                                </button>
+                            </div>
                         </div>
 
-                        {{-- <div class="subcatstest bg-light rounded-sm">
-                            <ul class="">
-                                {{
-                                    print_r($subcats)
-                                }}
-                            </ul>
-                        </div> --}}
-                    </div>
+
+
+                        <select class="form-control mb-2 selectpicker"  name="cats[]"
+                            title="Categories" multiple data-live-search="false">
+                            @foreach ($cats as $item)
+                                <option value="{{ $item->id }}">{{ $item->name }}</option>
+                            @endforeach
+                        </select>
+
+
+                        <select class="form-control mb-2 selectpicker"  name="sub_cats[]"
+                            title="Sous Categories" multiple data-live-search="false">
+                            @foreach ($cats as $item)
+                                <option value="{{ $item->id }}">{{ $item->name }}</option>
+                            @endforeach
+                        </select>
+
+                        <select class="form-control mb-2 selectpicker" name="brands[]"
+                            title="Marques" multiple data-live-search="false">
+                            @foreach ($brands as $item)
+                                <option value="{{ $item->id }}">{{ $item->name }}</option>
+                            @endforeach
+                        </select>
+
+
+                    
+
+                        <button type="submit" class="btn btn-primary w-100">Rechercher</button>
+
+                    </form>
+                    <hr>
                 </div>
                 <div class="col-12 col-lg-9">
                     <div class='row'>
@@ -161,7 +156,7 @@
                         </div>
                         <div class='col-0 col-md-3 d-md-flex flex-md-column d-none justify-content-between characteristic'>
                             <div class='d-flex align-items-center font-weight-bold p-2'>
-                                <i class="bi bi-truck mr-2 text-primary"></i>Livraison au choix  
+                                <i class="bi bi-truck mr-2 text-primary"></i>Livraison au choix
                             </div>
                             <div class='d-flex align-items-center font-weight-bold p-2'>
                                 <i class="bi bi-ui-radios-grid mr-2 text-primary"></i>Diversité de produits
@@ -258,14 +253,21 @@
                                     <input type="hidden" name="product_id" value="{{ $product->id }}">
                                     <div class="qte-products">
                                         <span>Qte :</span>
-                                        <div class="qte-products-control">
-                                            <button type="button" class="text-center"
-                                                onclick="changeQty(this, -1)">-</button>
-                                            <input class="text-center" id="qty-{{ $product->id }}" min="1"
-                                                value="1" type="number" name="qte">
-                                            <button type="button" class="text-center"
-                                                onclick="changeQty(this, 1)">+</button>
+                                        <div
+                                            style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+                                            <div class="qte-products-control">
+                                                <button type="button" class="text-center"
+                                                    onclick="changeQty(this, -1)">-</button>
+                                                <input class="text-center" id="qty-{{ $item->id }}" min="1"
+                                                    value="1" type="number" name="qte">
+                                                <button type="button" class="text-center"
+                                                    onclick="changeQty(this, 1)">+</button>
+                                            </div>
+                                            <div>
+                                                <p style="font-weight: 600">{{ $item->unit }}</p>
+                                            </div>
                                         </div>
+
                                     </div>
                                     <div class="add-to-cart">
                                         <button class="btn btn-primary" type="submit"><i class="bi bi-cart"></i> Ajouter

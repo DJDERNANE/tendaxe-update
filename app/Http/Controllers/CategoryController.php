@@ -99,7 +99,8 @@ class CategoryController extends Controller
      */
     public function edit(Category $category)
     {
-        return view('admin.store.editCategory', compact('category')); 
+        $categories = Category::all();
+        return view('admin.store.editCategory', compact('category', 'categories')); 
     }
 
     /**

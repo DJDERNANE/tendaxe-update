@@ -24,12 +24,22 @@
         <form class='px-3 my-2' method="post" action="{{ route('cart.store') }}">
             @csrf
             <input type="hidden" value="{{ $item->id }}" name="product_id" readonly>
-            <div class='row my-2'>
-                Qte :
-                <button class='col-2 text-center' onclick="minQty(event)">-</button>
-                <input class='col-4 text-center' id="qty" min="1"
-                    max="{{ $item->quantity }}" value="1" type="number" name="qte" />
-                <button class='col-2 text-center' onclick="addQty(event)">+</button>
+            <div class="qte-products">
+                <span>Qte :</span>
+                <div style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+                    <div class="qte-products-control">
+                        <button type="button" class="text-center"
+                            onclick="changeQty(this, -1)">-</button>
+                        <input class="text-center" id="qty-{{ $item->id }}" min="1"
+                            value="1" type="number" name="qte">
+                        <button type="button" class="text-center"
+                            onclick="changeQty(this, 1)">+</button>
+                    </div>
+                    <div>
+                        <p style="font-weight: 600">{{ $item->unit }}</p>
+                    </div>
+                </div>
+
             </div>
             <div class='row'>
                 <button class="btn btn-primary col-12"><i class="bi bi-cart"></i> Ajouter au

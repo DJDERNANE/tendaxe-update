@@ -17,6 +17,21 @@
                     </div>
                     <br>
                     <div class="form-group">
+                        <label for="parent_id">Parent : </label>
+                        <select class="form-control" name="parent_id" id="parent_id">
+                            <option value="">Select Parent</option>
+                            <!-- Assuming $categories contains all available categories -->
+                            @foreach($categories as $categoryOption)
+                                <option value="{{ $categoryOption->id }}" 
+                                    @if($categoryOption->id == $category->parent_id) selected @endif>
+                                    {{ $categoryOption->name }} <!-- Adjust this to the category name or whatever field is relevant -->
+                                </option>
+                            @endforeach
+                        </select>
+                    </div>
+                    
+                    <br>
+                    <div class="form-group">
                         
                         <img class="col-3 mx-auto shadow-sm bg-white" width="50" height="50" src="{{ asset('pictures/Category/'.$category->picture) }}" alt="image">
                         <label for="">Changer la Photo : </label>
